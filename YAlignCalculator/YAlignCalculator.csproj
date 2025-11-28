@@ -53,6 +53,7 @@
     <Compile Include="IntegerTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="JumpFormat.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,12 +62,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YAlignAdjustCalculation.cs" />
     <Compile Include="YAlignAdjustControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="YAlignAdjustControl.Designer.cs">
       <DependentUpon>YAlignAdjustControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="YAlignAdjustOutputFormat.cs" />
     <Compile Include="YStringCalcControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

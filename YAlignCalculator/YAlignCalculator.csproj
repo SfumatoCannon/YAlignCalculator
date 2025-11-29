@@ -54,6 +54,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="JumpFormat.cs" />
+    <Compile Include="LeapFormat.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -9,7 +9,33 @@ namespace YAlignCalculator
     internal class JumpFormat
     {
         public bool IsJumped { get; set; }
-        public List<int> CancelFrameList { get; set; }
+        public List<int> CancelFrameList { get; set; } = new List<int>();
+        public void SetFromString(string jumpFormatString)
+        {
+            string[] cancelFrameElementStrings = jumpFormatString.Split('+');
+            CancelFrameList.Clear();
+            foreach (string i in cancelFrameElementStrings)
+            {
+                int cancelFrameElement;
+                if (int.TryParse(i, out cancelFrameElement))
+                {
+                    CancelFrameList.Add(cancelFrameElement);
+                }
+                else
+                {
+                    throw new FormatException($"Invalid format: '{i}' is not a valid integer.");
+                }
+            }
+            if (CancelFrameList.Count == 1 && CancelFrameList[0] == 23)
+            {
+                IsJumped = false;
+                CancelFrameList.Clear();
+            }
+            else
+            {
+                IsJumped = true;
+            }
+        }
         public String GetJumpExpression()
         {
             if (!IsJumped)
@@ -27,7 +53,7 @@ namespace YAlignCalculator
         }
         public int GetCancelFrameTick(int cancelIndex) // CancelIndex start from 0; Return start from 1
         {
-            if (cancelIndex < 0 || cancelIndex >= CancelFrameList.Count )
+            if (cancelIndex < 0 || cancelIndex >= CancelFrameList.Count)
             {
                 throw new ArgumentOutOfRangeException(nameof(cancelIndex), cancelIndex, $"'{nameof(cancelIndex)}' cannot be negative");
             }

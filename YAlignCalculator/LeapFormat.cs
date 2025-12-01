@@ -51,6 +51,19 @@ namespace YAlignCalculator
                 }
             }
         }
+        public string GetLeapExpression()
+        {
+            if (JumpDetailList.Count == 0)
+                return string.Empty;
+            StringBuilder sb = new StringBuilder();
+            sb.Append(JumpDetailList[0].GetJumpExpression());
+            for (int i = 1; i < JumpDetailList.Count; i++)
+            {
+                sb.Append($" + {JumpPauseList[i]}f + ");
+                sb.Append(JumpDetailList[i].GetJumpExpression());
+            }
+            return sb.ToString();
+        }
         public int GetJumpFrameTick(int jumpIndex) // JumpIndex start from 0; Result start From 1 
         {
             if (jumpIndex < 0 || jumpIndex >= JumpDetailList.Count)

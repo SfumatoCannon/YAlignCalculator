@@ -53,13 +53,13 @@
             // yalignAdjustmentToolStripMenuItem
             // 
             this.yalignAdjustmentToolStripMenuItem.Name = "yalignAdjustmentToolStripMenuItem";
-            this.yalignAdjustmentToolStripMenuItem.Size = new System.Drawing.Size(191, 30);
+            this.yalignAdjustmentToolStripMenuItem.Size = new System.Drawing.Size(191, 32);
             this.yalignAdjustmentToolStripMenuItem.Text = "Y-align adjustment";
             // 
             // ystringCalculationToolStripMenuItem
             // 
             this.ystringCalculationToolStripMenuItem.Name = "ystringCalculationToolStripMenuItem";
-            this.ystringCalculationToolStripMenuItem.Size = new System.Drawing.Size(193, 30);
+            this.ystringCalculationToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
             this.ystringCalculationToolStripMenuItem.Text = "Y-string calculation";
             // 
             // mainPanel

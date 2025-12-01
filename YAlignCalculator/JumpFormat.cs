@@ -36,19 +36,19 @@ namespace YAlignCalculator
                 IsJumped = true;
             }
         }
-        public String GetJumpExpression()
+        public string GetJumpExpression()
         {
             if (!IsJumped)
-                return null;
+                return string.Empty;
             if (CancelFrameList.Count == 0)
                 return "23f";
             else if (CancelFrameList.Count == 1)
                 return $"{CancelFrameList[0]}f";
             StringBuilder sb = new StringBuilder();
             sb.Append($"({CancelFrameList[0]}");
-            foreach (int i in CancelFrameList)
-                sb.Append($" + {i}");
-            sb.Append(")");
+            for (int i = 1; i < CancelFrameList.Count; i++)
+                sb.Append($" + {CancelFrameList[i]}");
+            sb.Append(")f");
             return sb.ToString();
         }
         public int GetCancelFrameTick(int cancelIndex) // CancelIndex start from 0; Return start from 1

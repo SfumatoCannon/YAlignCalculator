@@ -15,15 +15,7 @@ namespace YAlignCalculator
         public MainForm()
         {
             InitializeComponent();
-            ShowPage(new YAlignAdjustControl());
             this.MinimumSize = new Size(800, 500);
-        }
-
-        private void ShowPage(UserControl page)
-        {
-            panelContainer.Controls.Clear();
-            page.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(page);
         }
     }
 }

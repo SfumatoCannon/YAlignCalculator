@@ -9,6 +9,9 @@ namespace YAlignCalculator
     internal class YAlignAdjustOutputFormat
     {
         int Id { get; set; }
-
+        float StartY { get; set; }
+        float EndY { get; set; }
+        List<LeapFormat> LeapList { get; set; }
+        List<float> YProgressList { get; set; }
     }
 }

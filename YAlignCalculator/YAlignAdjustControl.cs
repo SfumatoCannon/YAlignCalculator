@@ -56,7 +56,17 @@ namespace YAlignCalculator
                 integerTextBoxHeightLimit.Enabled = true;
             }
         }
+        private void checkBoxPlatformLanding_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxPlatformLanding.Checked)
+                checkBoxNoBunnyHop.Checked = false;
+        }
 
+        private void checkBoxNoBunnyHop_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxNoBunnyHop.Checked)
+                checkBoxPlatformLanding.Checked = false;
+        }
         private void buttonYAlignSearch_Click(object sender, EventArgs e)
         {
             if (textBoxStartY.ForeColor == Color.Red)
@@ -81,6 +91,8 @@ namespace YAlignCalculator
             }
             else
             {
+                // New calculation thread start...
+
                 textBoxStartY.Enabled = false;
                 textBoxTargetYLeft.Enabled = false;
                 textBoxTargetYRight.Enabled = false;
@@ -88,21 +100,41 @@ namespace YAlignCalculator
                 radioButtonLimitDeadly.Enabled = false;
                 integerTextBoxHeightLimit.Enabled = false;
                 buttonYAlignSearch.Enabled = false;
+                radioButtonStrategyEasiest.Enabled = false;
+                radioButtonStrategyFastest.Enabled = false;
+                checkBoxCactus.Enabled = false;
+                checkBoxJumpCancel.Enabled = false;
+                checkBoxPlatformLanding.Enabled = false;
+                checkBoxSingleJumpOnly.Enabled = false;
+                checkBoxNoBunnyHop.Enabled = false;
+
+                buttonYAlignSearch.Enabled = false;
                 buttonYAlignCancel.Enabled = true;
                 buttonYAlignCancel.Visible = true;
             }
         }
 
-        private void checkBoxPlatformLanding_CheckedChanged(object sender, EventArgs e)
+        private void buttonYAlignCancel_Click(object sender, EventArgs e)
         {
-            if (checkBoxPlatformLanding.Checked)
-                checkBoxNoBH.Checked = false;
-        }
+            // Cancel calculation thread...
+            textBoxStartY.Enabled = true;
+            textBoxTargetYLeft.Enabled = true;
+            textBoxTargetYRight.Enabled = true;
+            radioButtonLimitSolid.Enabled = true;
+            radioButtonLimitDeadly.Enabled = true;
+            integerTextBoxHeightLimit.Enabled = true;
+            buttonYAlignSearch.Enabled = true;
+            radioButtonStrategyEasiest.Enabled = true;
+            radioButtonStrategyFastest.Enabled = true;
+            checkBoxCactus.Enabled = true;
+            checkBoxJumpCancel.Enabled = true;
+            checkBoxPlatformLanding.Enabled = true;
+            checkBoxSingleJumpOnly.Enabled = true;
+            checkBoxNoBunnyHop.Enabled = true;
 
-        private void checkBoxNoBH_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxNoBH.Checked)
-                checkBoxPlatformLanding.Checked = false;
+            buttonYAlignSearch.Enabled = true;
+            buttonYAlignCancel.Enabled = false;
+            buttonYAlignCancel.Visible = false;
         }
     }
 }

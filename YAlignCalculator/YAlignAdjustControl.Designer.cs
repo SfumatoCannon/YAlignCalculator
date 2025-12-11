@@ -36,26 +36,26 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBoxTargetYLeft = new YAlignCalculator.FloatStepperTextBox();
+            this.textBoxTargetYRight = new YAlignCalculator.FloatStepperTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxStartY = new YAlignCalculator.FloatStepperTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButtonLimitDeadly = new System.Windows.Forms.RadioButton();
             this.radioButtonLimitSolid = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.integerTextBoxHeightLimit = new YAlignCalculator.IntegerTextBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonYAlignSearch = new System.Windows.Forms.Button();
             this.buttonYAlignCancel = new System.Windows.Forms.Button();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBoxCactus = new System.Windows.Forms.CheckBox();
-            this.checkBoxJC = new System.Windows.Forms.CheckBox();
+            this.checkBoxJumpCancel = new System.Windows.Forms.CheckBox();
             this.checkBoxPlatformLanding = new System.Windows.Forms.CheckBox();
             this.checkBoxSingleJumpOnly = new System.Windows.Forms.CheckBox();
-            this.checkBoxNoBH = new System.Windows.Forms.CheckBox();
-            this.textBoxTargetYLeft = new YAlignCalculator.FloatStepperTextBox();
-            this.textBoxTargetYRight = new YAlignCalculator.FloatStepperTextBox();
-            this.textBoxStartY = new YAlignCalculator.FloatStepperTextBox();
-            this.integerTextBoxHeightLimit = new YAlignCalculator.IntegerTextBox();
+            this.checkBoxNoBunnyHop = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -186,6 +186,24 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "～";
             // 
+            // textBoxTargetYLeft
+            // 
+            this.textBoxTargetYLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTargetYLeft.ForeColor = System.Drawing.Color.Black;
+            this.textBoxTargetYLeft.Location = new System.Drawing.Point(123, 13);
+            this.textBoxTargetYLeft.Name = "textBoxTargetYLeft";
+            this.textBoxTargetYLeft.Size = new System.Drawing.Size(161, 28);
+            this.textBoxTargetYLeft.TabIndex = 2;
+            // 
+            // textBoxTargetYRight
+            // 
+            this.textBoxTargetYRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTargetYRight.ForeColor = System.Drawing.Color.Black;
+            this.textBoxTargetYRight.Location = new System.Drawing.Point(320, 13);
+            this.textBoxTargetYRight.Name = "textBoxTargetYRight";
+            this.textBoxTargetYRight.Size = new System.Drawing.Size(162, 28);
+            this.textBoxTargetYRight.TabIndex = 3;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -212,6 +230,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Start Y:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBoxStartY
+            // 
+            this.textBoxStartY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxStartY.ForeColor = System.Drawing.Color.Black;
+            this.textBoxStartY.Location = new System.Drawing.Point(123, 13);
+            this.textBoxStartY.Name = "textBoxStartY";
+            this.textBoxStartY.Size = new System.Drawing.Size(359, 28);
+            this.textBoxStartY.TabIndex = 1;
             // 
             // richTextBox1
             // 
@@ -298,6 +325,41 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "px";
             // 
+            // integerTextBoxHeightLimit
+            // 
+            this.integerTextBoxHeightLimit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.integerTextBoxHeightLimit.Enabled = false;
+            this.integerTextBoxHeightLimit.ForeColor = System.Drawing.Color.Black;
+            this.integerTextBoxHeightLimit.Location = new System.Drawing.Point(334, 13);
+            this.integerTextBoxHeightLimit.Name = "integerTextBoxHeightLimit";
+            this.integerTextBoxHeightLimit.Size = new System.Drawing.Size(74, 28);
+            this.integerTextBoxHeightLimit.TabIndex = 4;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel6.Controls.Add(this.buttonYAlignSearch, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.buttonYAlignCancel, 2, 2);
+            this.tableLayoutPanel6.Controls.Add(this.checkBoxCactus, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.checkBoxJumpCancel, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.checkBoxPlatformLanding, 1, 2);
+            this.tableLayoutPanel6.Controls.Add(this.checkBoxSingleJumpOnly, 1, 3);
+            this.tableLayoutPanel6.Controls.Add(this.checkBoxNoBunnyHop, 1, 4);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 387);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 5;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(485, 154);
+            this.tableLayoutPanel6.TabIndex = 7;
+            // 
             // buttonYAlignSearch
             // 
             this.buttonYAlignSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -325,31 +387,7 @@
             this.buttonYAlignCancel.Text = "Cancel";
             this.buttonYAlignCancel.UseVisualStyleBackColor = true;
             this.buttonYAlignCancel.Visible = false;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 3;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel6.Controls.Add(this.buttonYAlignSearch, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.buttonYAlignCancel, 2, 2);
-            this.tableLayoutPanel6.Controls.Add(this.checkBoxCactus, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.checkBoxJC, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.checkBoxPlatformLanding, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.checkBoxSingleJumpOnly, 1, 3);
-            this.tableLayoutPanel6.Controls.Add(this.checkBoxNoBH, 1, 4);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 387);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 5;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(485, 154);
-            this.tableLayoutPanel6.TabIndex = 7;
+            this.buttonYAlignCancel.Click += new System.EventHandler(this.buttonYAlignCancel_Click);
             // 
             // checkBoxCactus
             // 
@@ -362,16 +400,16 @@
             this.checkBoxCactus.Text = "Cactus";
             this.checkBoxCactus.UseVisualStyleBackColor = true;
             // 
-            // checkBoxJC
+            // checkBoxJumpCancel
             // 
-            this.checkBoxJC.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkBoxJC.AutoSize = true;
-            this.checkBoxJC.Location = new System.Drawing.Point(51, 34);
-            this.checkBoxJC.Name = "checkBoxJC";
-            this.checkBoxJC.Size = new System.Drawing.Size(133, 22);
-            this.checkBoxJC.TabIndex = 7;
-            this.checkBoxJC.Text = "Jump-cancel";
-            this.checkBoxJC.UseVisualStyleBackColor = true;
+            this.checkBoxJumpCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.checkBoxJumpCancel.AutoSize = true;
+            this.checkBoxJumpCancel.Location = new System.Drawing.Point(51, 34);
+            this.checkBoxJumpCancel.Name = "checkBoxJumpCancel";
+            this.checkBoxJumpCancel.Size = new System.Drawing.Size(133, 22);
+            this.checkBoxJumpCancel.TabIndex = 7;
+            this.checkBoxJumpCancel.Text = "Jump-cancel";
+            this.checkBoxJumpCancel.UseVisualStyleBackColor = true;
             // 
             // checkBoxPlatformLanding
             // 
@@ -398,55 +436,18 @@
             this.checkBoxSingleJumpOnly.Text = "Single jump only";
             this.checkBoxSingleJumpOnly.UseVisualStyleBackColor = true;
             // 
-            // checkBoxNoBH
+            // checkBoxNoBunnyHop
             // 
-            this.checkBoxNoBH.AutoSize = true;
-            this.checkBoxNoBH.Checked = true;
-            this.checkBoxNoBH.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNoBH.Location = new System.Drawing.Point(51, 123);
-            this.checkBoxNoBH.Name = "checkBoxNoBH";
-            this.checkBoxNoBH.Size = new System.Drawing.Size(142, 22);
-            this.checkBoxNoBH.TabIndex = 10;
-            this.checkBoxNoBH.Text = "No bunny-hop";
-            this.checkBoxNoBH.UseVisualStyleBackColor = true;
-            this.checkBoxNoBH.CheckedChanged += new System.EventHandler(this.checkBoxNoBH_CheckedChanged);
-            // 
-            // textBoxTargetYLeft
-            // 
-            this.textBoxTargetYLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTargetYLeft.ForeColor = System.Drawing.Color.Black;
-            this.textBoxTargetYLeft.Location = new System.Drawing.Point(123, 13);
-            this.textBoxTargetYLeft.Name = "textBoxTargetYLeft";
-            this.textBoxTargetYLeft.Size = new System.Drawing.Size(161, 28);
-            this.textBoxTargetYLeft.TabIndex = 2;
-            // 
-            // textBoxTargetYRight
-            // 
-            this.textBoxTargetYRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTargetYRight.ForeColor = System.Drawing.Color.Black;
-            this.textBoxTargetYRight.Location = new System.Drawing.Point(320, 13);
-            this.textBoxTargetYRight.Name = "textBoxTargetYRight";
-            this.textBoxTargetYRight.Size = new System.Drawing.Size(162, 28);
-            this.textBoxTargetYRight.TabIndex = 3;
-            // 
-            // textBoxStartY
-            // 
-            this.textBoxStartY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxStartY.ForeColor = System.Drawing.Color.Black;
-            this.textBoxStartY.Location = new System.Drawing.Point(123, 13);
-            this.textBoxStartY.Name = "textBoxStartY";
-            this.textBoxStartY.Size = new System.Drawing.Size(359, 28);
-            this.textBoxStartY.TabIndex = 1;
-            // 
-            // integerTextBoxHeightLimit
-            // 
-            this.integerTextBoxHeightLimit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.integerTextBoxHeightLimit.Enabled = false;
-            this.integerTextBoxHeightLimit.ForeColor = System.Drawing.Color.Black;
-            this.integerTextBoxHeightLimit.Location = new System.Drawing.Point(334, 13);
-            this.integerTextBoxHeightLimit.Name = "integerTextBoxHeightLimit";
-            this.integerTextBoxHeightLimit.Size = new System.Drawing.Size(74, 28);
-            this.integerTextBoxHeightLimit.TabIndex = 4;
+            this.checkBoxNoBunnyHop.AutoSize = true;
+            this.checkBoxNoBunnyHop.Checked = true;
+            this.checkBoxNoBunnyHop.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNoBunnyHop.Location = new System.Drawing.Point(51, 123);
+            this.checkBoxNoBunnyHop.Name = "checkBoxNoBunnyHop";
+            this.checkBoxNoBunnyHop.Size = new System.Drawing.Size(142, 22);
+            this.checkBoxNoBunnyHop.TabIndex = 10;
+            this.checkBoxNoBunnyHop.Text = "No bunny-hop";
+            this.checkBoxNoBunnyHop.UseVisualStyleBackColor = true;
+            this.checkBoxNoBunnyHop.CheckedChanged += new System.EventHandler(this.checkBoxNoBunnyHop_CheckedChanged);
             // 
             // YAlignAdjustControl
             // 
@@ -497,9 +498,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.CheckBox checkBoxCactus;
-        private System.Windows.Forms.CheckBox checkBoxJC;
+        private System.Windows.Forms.CheckBox checkBoxJumpCancel;
         private System.Windows.Forms.CheckBox checkBoxPlatformLanding;
         private System.Windows.Forms.CheckBox checkBoxSingleJumpOnly;
-        private System.Windows.Forms.CheckBox checkBoxNoBH;
+        private System.Windows.Forms.CheckBox checkBoxNoBunnyHop;
     }
 }

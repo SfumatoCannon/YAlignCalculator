@@ -15,7 +15,7 @@ namespace YAlignCalculator
         public MainForm()
         {
             InitializeComponent();
-            this.MinimumSize = new Size(800, 500);
+            this.MinimumSize = new Size(600, 400);
         }
     }
 }

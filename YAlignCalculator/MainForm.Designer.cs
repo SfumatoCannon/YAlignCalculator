@@ -30,8 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageYAlignAdjust = new System.Windows.Forms.TabPage();
-            this.yAlignAdjustControl1 = new YAlignCalculator.YAlignAdjustControl();
             this.tabPageYStringCalc = new System.Windows.Forms.TabPage();
+            this.yAlignAdjustControl1 = new YAlignCalculator.YAlignAdjustControl();
             this.tabControl1.SuspendLayout();
             this.tabPageYAlignAdjust.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +46,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1025, 627);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabStop = false;
             // 
             // tabPageYAlignAdjust
             // 
@@ -58,15 +59,6 @@
             this.tabPageYAlignAdjust.Text = "YA Adjust";
             this.tabPageYAlignAdjust.UseVisualStyleBackColor = true;
             // 
-            // yAlignAdjustControl1
-            // 
-            this.yAlignAdjustControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.yAlignAdjustControl1.Location = new System.Drawing.Point(3, 3);
-            this.yAlignAdjustControl1.Name = "yAlignAdjustControl1";
-            this.yAlignAdjustControl1.Padding = new System.Windows.Forms.Padding(20);
-            this.yAlignAdjustControl1.Size = new System.Drawing.Size(1011, 589);
-            this.yAlignAdjustControl1.TabIndex = 0;
-            // 
             // tabPageYStringCalc
             // 
             this.tabPageYStringCalc.Location = new System.Drawing.Point(4, 28);
@@ -76,6 +68,16 @@
             this.tabPageYStringCalc.TabIndex = 1;
             this.tabPageYStringCalc.Text = "YString Calc";
             this.tabPageYStringCalc.UseVisualStyleBackColor = true;
+            // 
+            // yAlignAdjustControl1
+            // 
+            this.yAlignAdjustControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.yAlignAdjustControl1.Location = new System.Drawing.Point(3, 3);
+            this.yAlignAdjustControl1.Name = "yAlignAdjustControl1";
+            this.yAlignAdjustControl1.Padding = new System.Windows.Forms.Padding(20);
+            this.yAlignAdjustControl1.Size = new System.Drawing.Size(1011, 589);
+            this.yAlignAdjustControl1.TabIndex = 0;
+            this.yAlignAdjustControl1.TabStop = false;
             // 
             // MainForm
             // 

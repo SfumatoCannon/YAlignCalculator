@@ -36,18 +36,14 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxTargetYLeft = new YAlignCalculator.FloatStepperTextBox();
-            this.textBoxTargetYRight = new YAlignCalculator.FloatStepperTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxStartY = new YAlignCalculator.FloatStepperTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxResult = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButtonLimitDeadly = new System.Windows.Forms.RadioButton();
             this.radioButtonLimitSolid = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.integerTextBoxHeightLimit = new YAlignCalculator.IntegerTextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonYAlignSearch = new System.Windows.Forms.Button();
             this.buttonYAlignCancel = new System.Windows.Forms.Button();
@@ -56,6 +52,10 @@
             this.checkBoxPlatformLanding = new System.Windows.Forms.CheckBox();
             this.checkBoxSingleJumpOnly = new System.Windows.Forms.CheckBox();
             this.checkBoxNoBunnyHop = new System.Windows.Forms.CheckBox();
+            this.textBoxTargetYLeft = new YAlignCalculator.FloatStepperTextBox();
+            this.textBoxTargetYRight = new YAlignCalculator.FloatStepperTextBox();
+            this.textBoxStartY = new YAlignCalculator.FloatStepperTextBox();
+            this.integerTextBoxHeightLimit = new YAlignCalculator.IntegerTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -73,7 +73,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.richTextBox1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.richTextBoxResult, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,6 +119,7 @@
             this.radioButtonStrategyFastest.Name = "radioButtonStrategyFastest";
             this.radioButtonStrategyFastest.Size = new System.Drawing.Size(114, 22);
             this.radioButtonStrategyFastest.TabIndex = 1;
+            this.radioButtonStrategyFastest.TabStop = true;
             this.radioButtonStrategyFastest.Text = "Fastest";
             this.radioButtonStrategyFastest.UseVisualStyleBackColor = true;
             // 
@@ -186,24 +187,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "～";
             // 
-            // textBoxTargetYLeft
-            // 
-            this.textBoxTargetYLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTargetYLeft.ForeColor = System.Drawing.Color.Black;
-            this.textBoxTargetYLeft.Location = new System.Drawing.Point(123, 13);
-            this.textBoxTargetYLeft.Name = "textBoxTargetYLeft";
-            this.textBoxTargetYLeft.Size = new System.Drawing.Size(161, 28);
-            this.textBoxTargetYLeft.TabIndex = 2;
-            // 
-            // textBoxTargetYRight
-            // 
-            this.textBoxTargetYRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTargetYRight.ForeColor = System.Drawing.Color.Black;
-            this.textBoxTargetYRight.Location = new System.Drawing.Point(320, 13);
-            this.textBoxTargetYRight.Name = "textBoxTargetYRight";
-            this.textBoxTargetYRight.Size = new System.Drawing.Size(162, 28);
-            this.textBoxTargetYRight.TabIndex = 3;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -231,25 +214,18 @@
             this.label1.Text = "Start Y:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBoxStartY
+            // richTextBoxResult
             // 
-            this.textBoxStartY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxStartY.ForeColor = System.Drawing.Color.Black;
-            this.textBoxStartY.Location = new System.Drawing.Point(123, 13);
-            this.textBoxStartY.Name = "textBoxStartY";
-            this.textBoxStartY.Size = new System.Drawing.Size(359, 28);
-            this.textBoxStartY.TabIndex = 1;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(534, 126);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.tableLayoutPanel1.SetRowSpan(this.richTextBox1, 6);
-            this.richTextBox1.Size = new System.Drawing.Size(322, 415);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.richTextBoxResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBoxResult.Location = new System.Drawing.Point(534, 126);
+            this.richTextBoxResult.Name = "richTextBoxResult";
+            this.richTextBoxResult.ReadOnly = true;
+            this.tableLayoutPanel1.SetRowSpan(this.richTextBoxResult, 6);
+            this.richTextBoxResult.Size = new System.Drawing.Size(322, 415);
+            this.richTextBoxResult.TabIndex = 2;
+            this.richTextBoxResult.TabStop = false;
+            this.richTextBoxResult.Text = "";
+            this.richTextBoxResult.MouseDown += new System.Windows.Forms.MouseEventHandler(this.richTextBoxResult_MouseDown);
             // 
             // tableLayoutPanel4
             // 
@@ -318,22 +294,12 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("宋体", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(414, 19);
+            this.label5.Font = new System.Drawing.Font("宋体", 9F);
+            this.label5.Location = new System.Drawing.Point(414, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 16);
+            this.label5.Size = new System.Drawing.Size(26, 18);
             this.label5.TabIndex = 3;
             this.label5.Text = "px";
-            // 
-            // integerTextBoxHeightLimit
-            // 
-            this.integerTextBoxHeightLimit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.integerTextBoxHeightLimit.Enabled = false;
-            this.integerTextBoxHeightLimit.ForeColor = System.Drawing.Color.Black;
-            this.integerTextBoxHeightLimit.Location = new System.Drawing.Point(334, 13);
-            this.integerTextBoxHeightLimit.Name = "integerTextBoxHeightLimit";
-            this.integerTextBoxHeightLimit.Size = new System.Drawing.Size(74, 28);
-            this.integerTextBoxHeightLimit.TabIndex = 4;
             // 
             // tableLayoutPanel6
             // 
@@ -449,6 +415,43 @@
             this.checkBoxNoBunnyHop.UseVisualStyleBackColor = true;
             this.checkBoxNoBunnyHop.CheckedChanged += new System.EventHandler(this.checkBoxNoBunnyHop_CheckedChanged);
             // 
+            // textBoxTargetYLeft
+            // 
+            this.textBoxTargetYLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTargetYLeft.ForeColor = System.Drawing.Color.Black;
+            this.textBoxTargetYLeft.Location = new System.Drawing.Point(123, 13);
+            this.textBoxTargetYLeft.Name = "textBoxTargetYLeft";
+            this.textBoxTargetYLeft.Size = new System.Drawing.Size(161, 28);
+            this.textBoxTargetYLeft.TabIndex = 2;
+            // 
+            // textBoxTargetYRight
+            // 
+            this.textBoxTargetYRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTargetYRight.ForeColor = System.Drawing.Color.Black;
+            this.textBoxTargetYRight.Location = new System.Drawing.Point(320, 13);
+            this.textBoxTargetYRight.Name = "textBoxTargetYRight";
+            this.textBoxTargetYRight.Size = new System.Drawing.Size(162, 28);
+            this.textBoxTargetYRight.TabIndex = 3;
+            // 
+            // textBoxStartY
+            // 
+            this.textBoxStartY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxStartY.ForeColor = System.Drawing.Color.Black;
+            this.textBoxStartY.Location = new System.Drawing.Point(123, 13);
+            this.textBoxStartY.Name = "textBoxStartY";
+            this.textBoxStartY.Size = new System.Drawing.Size(359, 28);
+            this.textBoxStartY.TabIndex = 1;
+            // 
+            // integerTextBoxHeightLimit
+            // 
+            this.integerTextBoxHeightLimit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.integerTextBoxHeightLimit.Enabled = false;
+            this.integerTextBoxHeightLimit.ForeColor = System.Drawing.Color.Black;
+            this.integerTextBoxHeightLimit.Location = new System.Drawing.Point(334, 13);
+            this.integerTextBoxHeightLimit.Name = "integerTextBoxHeightLimit";
+            this.integerTextBoxHeightLimit.Size = new System.Drawing.Size(74, 28);
+            this.integerTextBoxHeightLimit.TabIndex = 2;
+            // 
             // YAlignAdjustControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -483,7 +486,7 @@
         private FloatStepperTextBox textBoxStartY;
         private FloatStepperTextBox textBoxTargetYLeft;
         private FloatStepperTextBox textBoxTargetYRight;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxResult;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.RadioButton radioButtonLimitSolid;
         private System.Windows.Forms.RadioButton radioButtonLimitDeadly;

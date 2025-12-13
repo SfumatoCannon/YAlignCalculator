@@ -136,5 +136,10 @@ namespace YAlignCalculator
             buttonYAlignCancel.Enabled = false;
             buttonYAlignCancel.Visible = false;
         }
+
+        private void richTextBoxResult_MouseDown(object sender, MouseEventArgs e)
+        {
+            ((RichTextBox)sender).Parent.Focus();
+        }
     }
 }
